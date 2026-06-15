@@ -19,10 +19,12 @@ export const siteConfig = {
 
 /** Primary navbar links (all point to real, indexable routes). */
 export const mainNav = [
+  { label: "For Founders", href: "/for-founders" },
   { label: "Services", href: "/services" },
   { label: "Why Conciero", href: "/why-conciero" },
   { label: "Pricing", href: "/pricing" },
   { label: "How It Works", href: "/how-it-works" },
+  { label: "Refer & Earn", href: "/referral-partner" },
 ] as const;
 
 export const footerNav = {
@@ -31,7 +33,9 @@ export const footerNav = {
     { label: "Services", href: "/services" },
     { label: "Pricing", href: "/pricing" },
     { label: "Enterprise", href: "/enterprise" },
+    { label: "For Founders", href: "/for-founders" },
     { label: "For Agencies", href: "/for-agencies" },
+    { label: "Referral Partners", href: "/referral-partner" },
   ],
   company: [
     { label: "B2B Services", href: "/b2b-services" },

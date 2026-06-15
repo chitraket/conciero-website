@@ -12,10 +12,12 @@ const routes = {
     "/contact",
     "/virtual-assistant",
     "/virtual-assistant-services-new-york",
+    "/for-founders",
   ],
   segments: [
     "/why-conciero",
     "/how-it-works",
+    "/referral-partner",
     "/enterprise",
     "/b2b-services",
     "/b2c-india",
