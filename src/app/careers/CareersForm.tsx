@@ -13,7 +13,7 @@ const FieldError = ({ msg }: { msg?: string }) =>
   msg ? <p className="mt-1 text-xs text-destructive">{msg}</p> : null;
 
 /**
- * Careers application form — validation + submission handled by Formik + Yup,
+ * Careers application form - validation + submission handled by Formik + Yup,
  * with delivery via the `submitConsultation` Server Action.
  */
 export function CareersForm() {
@@ -44,7 +44,9 @@ export function CareersForm() {
         setStatus("success");
         resetForm();
       } else {
-        setSubmitError(res.message || "Something went wrong. Please try again.");
+        setSubmitError(
+          res.message || "Something went wrong. Please try again.",
+        );
       }
     },
   });
@@ -73,24 +75,56 @@ export function CareersForm() {
       </div>
 
       <div>
-        <input className={inputClass} placeholder="Full Name *" {...formik.getFieldProps("name")} />
-        <FieldError msg={formik.touched.name ? formik.errors.name : undefined} />
+        <input
+          className={inputClass}
+          placeholder="Full Name *"
+          {...formik.getFieldProps("name")}
+        />
+        <FieldError
+          msg={formik.touched.name ? formik.errors.name : undefined}
+        />
       </div>
       <div>
-        <input type="email" className={inputClass} placeholder="Email Address *" {...formik.getFieldProps("email")} />
-        <FieldError msg={formik.touched.email ? formik.errors.email : undefined} />
+        <input
+          type="email"
+          className={inputClass}
+          placeholder="Email Address *"
+          {...formik.getFieldProps("email")}
+        />
+        <FieldError
+          msg={formik.touched.email ? formik.errors.email : undefined}
+        />
       </div>
       <div>
-        <input type="tel" className={inputClass} placeholder="Phone Number *" {...formik.getFieldProps("phone")} />
-        <FieldError msg={formik.touched.phone ? formik.errors.phone : undefined} />
+        <input
+          type="tel"
+          className={inputClass}
+          placeholder="Phone Number *"
+          {...formik.getFieldProps("phone")}
+        />
+        <FieldError
+          msg={formik.touched.phone ? formik.errors.phone : undefined}
+        />
       </div>
       <div>
-        <input className={inputClass} placeholder="Current Location *" {...formik.getFieldProps("location")} />
-        <FieldError msg={formik.touched.location ? formik.errors.location : undefined} />
+        <input
+          className={inputClass}
+          placeholder="Current Location *"
+          {...formik.getFieldProps("location")}
+        />
+        <FieldError
+          msg={formik.touched.location ? formik.errors.location : undefined}
+        />
       </div>
       <div>
-        <input className={inputClass} placeholder="Years of Experience *" {...formik.getFieldProps("experience")} />
-        <FieldError msg={formik.touched.experience ? formik.errors.experience : undefined} />
+        <input
+          className={inputClass}
+          placeholder="Years of Experience *"
+          {...formik.getFieldProps("experience")}
+        />
+        <FieldError
+          msg={formik.touched.experience ? formik.errors.experience : undefined}
+        />
       </div>
       <div>
         <select
@@ -104,10 +138,14 @@ export function CareersForm() {
           <option value="virtual-assistant">Virtual Assistant</option>
           <option value="executive-support">Executive / Founder Support</option>
           <option value="concierge">Concierge</option>
-          <option value="marketing-sales">Marketing / Sales / Operations</option>
+          <option value="marketing-sales">
+            Marketing / Sales / Operations
+          </option>
           <option value="other">Other</option>
         </select>
-        <FieldError msg={formik.touched.expertise ? formik.errors.expertise : undefined} />
+        <FieldError
+          msg={formik.touched.expertise ? formik.errors.expertise : undefined}
+        />
       </div>
       <div>
         <textarea
@@ -115,7 +153,9 @@ export function CareersForm() {
           placeholder="Why Do You Want to Work at Conciero? *"
           {...formik.getFieldProps("message")}
         />
-        <FieldError msg={formik.touched.message ? formik.errors.message : undefined} />
+        <FieldError
+          msg={formik.touched.message ? formik.errors.message : undefined}
+        />
       </div>
 
       {submitError && <p className="text-xs text-destructive">{submitError}</p>}

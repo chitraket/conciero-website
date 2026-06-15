@@ -50,6 +50,41 @@ const fullTimeFeatures = [
   "7-day free trial",
 ];
 
+const elitePartTimeFeatures = [
+  "Top 1% expert operator",
+  "Dedicated project manager oversight",
+  "Priority same-day task handling",
+  "Specialist bench access (design, web, automation)",
+  "Business + personal coordination",
+  "Unlimited free replacement",
+  "7-day free trial",
+];
+
+const eliteFullTimeFeatures = [
+  "Fully dedicated elite operator",
+  "Dedicated project + account manager",
+  "Same-day priority execution",
+  "Full specialist bench access",
+  "Proactive workflow management",
+  "Unlimited free replacement",
+  "7-day free trial",
+];
+
+const standardRoles = [
+  "Bookkeeping / Accounting VA",
+  "Executive Assistant",
+  "Personal Concierge",
+  "Graphic Designer",
+];
+
+const eliteRoles = [
+  "Web / Technical VA",
+  "Digital Marketing",
+  "Content Creator",
+  "BD Research Analyst",
+  "Project Manager",
+];
+
 const customItems = [
   "Fewer hours",
   "Ad-hoc or project-based support",
@@ -288,6 +323,148 @@ export default function PricingPage() {
               </Link>
             </div>
           </div>
+          <div className="max-w-4xl mx-auto mt-10 lg:mt-12 text-center">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-4">
+              Standard VA Roles
+            </h3>
+            <div className="flex flex-wrap justify-center gap-2.5">
+              {standardRoles.map((role) => (
+                <span
+                  key={role}
+                  className="rounded-full border border-border bg-secondary px-4 py-1.5 text-sm text-card-foreground"
+                >
+                  {role}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-16 lg:pb-24 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 lg:mb-10">
+            <span className="inline-block mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
+              Premium Tier
+            </span>
+            <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-2">
+              Elite Monthly Assistant Plans
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              A senior operator plus a dedicated management layer - for founders
+              and executives who want fully hands-off, high-touch execution.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+            {/* Elite Part-Time */}
+            <div className="bg-card rounded-2xl p-6 lg:p-8 shadow-card border border-accent/40 flex flex-col h-full relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="bg-charcoal text-accent px-4 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                  Elite
+                </span>
+              </div>
+              <div className="mb-6">
+                <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-2">
+                  Elite Part-Time Assistant
+                </h3>
+                <p className="text-accent font-semibold text-lg mb-3">
+                  20 Hours / Week
+                </p>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-3xl lg:text-4xl font-bold text-foreground">
+                    $1,399
+                  </span>
+                  <span className="text-muted-foreground">/month</span>
+                </div>
+              </div>
+              <p className="text-muted-foreground text-sm mb-6">
+                <span className="font-medium text-foreground">Best for:</span>{" "}
+                Founders who want premium, hands-off support
+              </p>
+              <ul className="space-y-3 mb-8 flex-grow">
+                {elitePartTimeFeatures.map((feature) => (
+                  <li key={feature} className="flex items-start gap-3">
+                    <CircleCheck className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-card-foreground text-sm lg:text-base">
+                      {feature}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-11 rounded-md px-8 w-full bg-foreground text-background hover:bg-foreground/90"
+              >
+                Talk to an Expert
+              </Link>
+            </div>
+            {/* Elite Full-Time - premium charcoal */}
+            <div className="rounded-2xl p-6 lg:p-8 shadow-luxury border-2 border-accent flex flex-col h-full relative bg-charcoal text-charcoal-foreground">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="bg-accent text-accent-foreground px-4 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                  Most Popular
+                </span>
+              </div>
+              <div className="mb-6">
+                <h3 className="text-xl lg:text-2xl font-bold text-charcoal-foreground mb-2">
+                  Elite Full-Time Assistant
+                </h3>
+                <p className="text-accent font-semibold text-lg mb-3">
+                  40 Hours / Week
+                </p>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-3xl lg:text-4xl font-bold text-charcoal-foreground">
+                    $1,999
+                  </span>
+                  <span className="text-charcoal-foreground/60">/month</span>
+                </div>
+              </div>
+              <p className="text-charcoal-foreground/70 text-sm mb-6">
+                <span className="font-medium text-charcoal-foreground">
+                  Best for:
+                </span>{" "}
+                Executives and teams needing high-touch, high-volume execution
+              </p>
+              <ul className="space-y-3 mb-8 flex-grow">
+                {eliteFullTimeFeatures.map((feature) => (
+                  <li key={feature} className="flex items-start gap-3">
+                    <CircleCheck className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-charcoal-foreground/90 text-sm lg:text-base">
+                      {feature}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-11 rounded-md px-8 w-full bg-accent text-accent-foreground hover:bg-accent/90"
+              >
+                Talk to an Expert
+              </Link>
+            </div>
+          </div>
+          <div className="max-w-4xl mx-auto mt-10 lg:mt-12 text-center">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-4">
+              Specialist / Elite VA Roles
+            </h3>
+            <div className="flex flex-wrap justify-center gap-2.5">
+              {eliteRoles.map((role) => (
+                <span
+                  key={role}
+                  className="rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-sm text-card-foreground"
+                >
+                  {role}
+                </span>
+              ))}
+            </div>
+          </div>
+          <p className="text-center text-muted-foreground/80 text-sm mt-8 max-w-xl mx-auto">
+            Need something between Standard and Elite, or fully custom?{" "}
+            <Link href="/contact" className="text-accent font-medium hover:underline">
+              Talk to an expert
+            </Link>{" "}
+            and we&apos;ll tailor a plan to you.
+          </p>
         </div>
       </section>
 

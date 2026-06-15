@@ -56,7 +56,7 @@ const phases: Phase[] = [
     Icon: Compass,
     title: "Share Your Requirements",
     timing: "Day 0 · ~15 minutes",
-    body: "We start with a short discovery call to understand your scope, priorities, working style, and the tasks slowing you down — no lengthy forms, no sales pressure.",
+    body: "We start with a short discovery call to understand your scope, priorities, working style, and the tasks slowing you down - no lengthy forms, no sales pressure.",
     points: [
       "Map the work you want off your plate",
       "Agree on tools, time zones, and communication style",
@@ -92,7 +92,7 @@ const phases: Phase[] = [
     Icon: Rocket,
     title: "Onboarding & Go-Live",
     timing: "Days 3–5 · Free trial week begins",
-    body: "Your operator, PM, and account manager go live and the operations transfer begins immediately — all inside a one-week free trial.",
+    body: "Your operator, PM, and account manager go live and the operations transfer begins immediately - all inside a one-week free trial.",
     points: [
       "Guided handover of tools, inboxes, and SOPs",
       "First tasks delegated from day one",
@@ -119,7 +119,7 @@ const included: Included[] = [
   {
     Icon: Crown,
     title: "Dedicated Executive Operator",
-    body: "A senior operator running your calendar, inbox, travel, gatekeeping, and daily priorities — not a generalist.",
+    body: "A senior operator running your calendar, inbox, travel, gatekeeping, and daily priorities - not a generalist.",
   },
   {
     Icon: ClipboardList,
@@ -153,7 +153,7 @@ const assurances: Assurance[] = [
   {
     Icon: ShieldCheck,
     title: "Continuity built in",
-    body: "When your operator is unavailable, the PM and account manager keep operations running — without interruption or owner involvement.",
+    body: "When your operator is unavailable, the PM and account manager keep operations running - without interruption or owner involvement.",
   },
   {
     Icon: Gauge,
@@ -169,7 +169,7 @@ const faqs = [
   },
   {
     q: "Do I have to sign a long-term contract?",
-    a: "No. You begin with a one-week free trial and continue on flexible monthly terms. There is no long-term lock-in — adjust or pause whenever your needs change.",
+    a: "No. You begin with a one-week free trial and continue on flexible monthly terms. There is no long-term lock-in - adjust or pause whenever your needs change.",
   },
   {
     q: "What if my operator isn't the right fit?",
@@ -177,7 +177,7 @@ const faqs = [
   },
   {
     q: "What happens if my operator is unavailable?",
-    a: "Continuity is built in. Your project manager and account manager keep every workstream running so nothing stalls — no owner involvement required.",
+    a: "Continuity is built in. Your project manager and account manager keep every workstream running so nothing stalls - no owner involvement required.",
   },
   {
     q: "Can I change my plan, hours, or services later?",
@@ -225,12 +225,13 @@ export default function HowItWorksPage() {
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-accent">
               Simple, Fast Onboarding
             </p>
-            <h1 className="font-serif text-4xl font-light leading-tight text-charcoal-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-bold leading-tight text-charcoal-foreground sm:text-5xl lg:text-6xl">
               How It Works
             </h1>
             <p className="mt-5 text-base leading-relaxed text-charcoal-foreground/70 md:text-lg">
-              From first call to fully delegated — go live with a dedicated operator,
-              project manager, and specialist bench in as little as 3–5 days.
+              From first call to fully delegated - go live with a dedicated
+              operator, project manager, and specialist bench in as little as
+              3–5 days.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Button asChild variant="accent" size="lg">
@@ -253,32 +254,27 @@ export default function HowItWorksPage() {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-12 max-w-2xl text-center">
-            <h2 className="font-serif text-3xl font-normal text-foreground md:text-4xl">
+            <h2 className="text-3xl font-bold text-foreground md:text-4xl">
               The End-to-End Process
             </h2>
             <p className="mt-3 text-muted-foreground">
-              No guesswork. Here is exactly what happens from the moment you reach out to
-              ongoing day-to-day operations.
+              No guesswork. Here is exactly what happens from the moment you
+              reach out to ongoing day-to-day operations.
             </p>
           </div>
           <div className="mx-auto max-w-4xl space-y-4">
-            {phases.map(({ num, Icon, title, timing, body, points }) => (
+            {phases.map(({ Icon, title, timing, body, points }) => (
               <div
-                key={num}
+                key={title}
                 className="rounded-xl border border-border/60 bg-card p-6 shadow-card transition-shadow hover:shadow-luxury md:p-8"
               >
                 <div className="grid gap-5 md:grid-cols-[auto_1fr]">
-                  <div className="flex items-start gap-4">
-                    <span className="font-serif text-4xl font-light leading-none text-accent">
-                      {num}
-                    </span>
-                    <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg bg-accent/10">
-                      <Icon className="h-5 w-5 text-accent" />
-                    </div>
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-accent/10">
+                    <Icon className="h-6 w-6 text-accent" />
                   </div>
                   <div>
                     <div className="flex flex-wrap items-baseline justify-between gap-2">
-                      <h3 className="font-serif text-xl font-medium text-foreground">
+                      <h3 className="text-xl font-semibold text-foreground">
                         {title}
                       </h3>
                       <span className="text-xs font-medium uppercase tracking-wider text-accent">
@@ -290,7 +286,10 @@ export default function HowItWorksPage() {
                     </p>
                     <ul className="mt-4 grid gap-2 sm:grid-cols-3">
                       {points.map((pt) => (
-                        <li key={pt} className="flex items-start gap-2 text-sm text-foreground">
+                        <li
+                          key={pt}
+                          className="flex items-start gap-2 text-sm text-foreground"
+                        >
                           <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
                           <span>{pt}</span>
                         </li>
@@ -308,19 +307,25 @@ export default function HowItWorksPage() {
       <section className="py-16 md:py-20 bg-secondary/40">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-12 max-w-2xl text-center">
-            <h2 className="font-serif text-3xl font-normal text-foreground md:text-4xl">
+            <h2 className="text-3xl font-bold text-foreground md:text-4xl">
               Your Team From Day One
             </h2>
             <p className="mt-3 text-muted-foreground">
-              One engagement gives you a full operating team — at the cost of a single role.
+              One engagement gives you a full operating team - at the cost of a
+              single role.
             </p>
           </div>
           <div className="mx-auto grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {included.map(({ Icon, title, body }) => (
-              <div key={title} className="rounded-xl border border-border/60 bg-card p-6 shadow-card">
+              <div
+                key={title}
+                className="rounded-xl border border-border/60 bg-card p-6 shadow-card"
+              >
                 <Icon className="mb-3 h-8 w-8 text-accent" />
                 <h3 className="mb-2 font-semibold text-foreground">{title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{body}</p>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {body}
+                </p>
               </div>
             ))}
           </div>
@@ -335,12 +340,15 @@ export default function HowItWorksPage() {
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.3em] text-accent">
                 Risk-Free Entry
               </p>
-              <h2 className="mb-5 font-serif text-2xl font-normal leading-tight text-foreground md:text-3xl">
+              <h2 className="mb-5 text-2xl font-bold leading-tight text-foreground md:text-3xl">
                 Every engagement starts with a free week.
               </h2>
               <ul className="grid gap-3 sm:grid-cols-2">
                 {trialTerms.map((term) => (
-                  <li key={term} className="flex items-center gap-3 text-sm text-foreground">
+                  <li
+                    key={term}
+                    className="flex items-center gap-3 text-sm text-foreground"
+                  >
                     <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-accent/20">
                       <Check className="h-3 w-3 text-accent" />
                     </span>
@@ -351,13 +359,20 @@ export default function HowItWorksPage() {
             </div>
             <div className="space-y-4">
               {assurances.map(({ Icon, title, body }) => (
-                <div key={title} className="flex gap-4 rounded-xl border border-border/60 bg-card p-6 shadow-card">
+                <div
+                  key={title}
+                  className="flex gap-4 rounded-xl border border-border/60 bg-card p-6 shadow-card"
+                >
                   <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-accent/10">
                     <Icon className="h-5 w-5 text-accent" />
                   </div>
                   <div>
-                    <h3 className="mb-1 font-semibold text-foreground">{title}</h3>
-                    <p className="text-sm leading-relaxed text-muted-foreground">{body}</p>
+                    <h3 className="mb-1 font-semibold text-foreground">
+                      {title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      {body}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -371,7 +386,7 @@ export default function HowItWorksPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <div className="mb-10 text-center">
-              <h2 className="font-serif text-3xl font-normal text-foreground md:text-4xl">
+              <h2 className="text-3xl font-bold text-foreground md:text-4xl">
                 Frequently Asked Questions
               </h2>
               <p className="mt-3 text-muted-foreground">
@@ -402,12 +417,12 @@ export default function HowItWorksPage() {
       <section className="bg-charcoal py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="mb-3 font-serif text-3xl font-normal text-charcoal-foreground md:text-4xl">
+            <h2 className="mb-3 text-3xl font-bold text-charcoal-foreground md:text-4xl">
               Ready to get started?
             </h2>
             <p className="mb-7 text-charcoal-foreground/70">
-              Book a free 15-minute call and meet your operator. Includes a one-week free
-              trial — no credit card required.
+              Book a free 15-minute call and meet your operator. Includes a
+              one-week free trial - no credit card required.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Button asChild variant="accent" size="lg">
@@ -424,7 +439,10 @@ export default function HowItWorksPage() {
             </div>
             <p className="mt-5 text-xs text-charcoal-foreground/60">
               Prefer to talk now? Call us at{" "}
-              <a href={`tel:${siteConfig.phone}`} className="font-medium text-accent hover:underline">
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="font-medium text-accent hover:underline"
+              >
                 {siteConfig.phoneDisplay}
               </a>
             </p>

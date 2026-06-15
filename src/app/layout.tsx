@@ -12,7 +12,7 @@ import {
 } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/lib/site";
 
-// Self-hosted, vendored locally (src/app/fonts) — no Google Fonts request at
+// Self-hosted, vendored locally (src/app/fonts) - no Google Fonts request at
 // build or runtime. Both are variable fonts, so one file covers all weights.
 const inter = localFont({
   src: "./fonts/inter-variable.woff2",

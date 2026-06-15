@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -15,6 +16,9 @@ import { mainNav } from "@/lib/site";
  */
 export function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#C4A35A] lg:bg-background/80 lg:backdrop-blur-sm">
@@ -36,7 +40,12 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium transition-colors hover:text-accent cursor-pointer text-foreground/80"
+                aria-current={isActive(item.href) ? "page" : undefined}
+                className={`text-sm font-medium transition-colors cursor-pointer hover:text-accent ${
+                  isActive(item.href)
+                    ? "text-accent font-semibold"
+                    : "text-foreground/80"
+                }`}
               >
                 {item.label}
               </Link>
@@ -66,7 +75,12 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-foreground/90 py-1"
+                aria-current={isActive(item.href) ? "page" : undefined}
+                className={`text-sm py-1 text-foreground/90 ${
+                  isActive(item.href)
+                    ? "font-semibold underline underline-offset-4"
+                    : "font-medium"
+                }`}
                 onClick={() => setOpen(false)}
               >
                 {item.label}

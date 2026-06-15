@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { Sparkles, Users, Plane, Briefcase, Megaphone, Handshake, ArrowRight } from "lucide-react";
+import {
+  Sparkles,
+  Users,
+  Plane,
+  Briefcase,
+  Megaphone,
+  Handshake,
+  ArrowRight,
+} from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -80,10 +88,15 @@ function ServiceCard({ icon: Icon, title, items, href }: Service) {
       <div className="text-accent mb-3 md:mb-4">
         <Icon className="w-7 h-7" />
       </div>
-      <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-foreground">{title}</h3>
+      <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-foreground">
+        {title}
+      </h3>
       <ul className="space-y-2 md:space-y-2.5 mb-4 md:mb-5">
         {items.map((item) => (
-          <li key={item} className="text-muted-foreground text-sm flex items-start gap-2">
+          <li
+            key={item}
+            className="text-muted-foreground text-sm flex items-start gap-2"
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0"></span>
             {item}
           </li>
@@ -101,14 +114,18 @@ function ServiceCard({ icon: Icon, title, items, href }: Service) {
 
 export function Services() {
   return (
-    <section id="services" className="py-12 md:py-20 bg-background scroll-mt-24">
+    <section
+      id="services"
+      className="py-12 md:py-20 bg-background scroll-mt-24"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-foreground leading-tight">
             Life, Work, and Everything In Between, Seamlessly Managed
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Explore our diverse range of assistant categories, designed to support your personal life, business, and everything in between.
+            Explore our diverse range of assistant categories, designed to
+            support your personal life, business, and everything in between.
           </p>
         </div>
         <div className="mb-8 md:mb-12">
@@ -126,11 +143,17 @@ export function Services() {
           </div>
         </div>
         <div className="text-center">
-          <p className="text-lg md:text-xl font-bold text-foreground mb-2">One Assistant. Endless Possibilities.</p>
-          <p className="text-xs md:text-sm text-muted-foreground mb-6 md:mb-8">
-            Your needs change — your support shouldn&apos;t.
+          <p className="text-lg md:text-xl font-bold text-foreground mb-2">
+            One Assistant. Endless Possibilities.
           </p>
-          <Button asChild variant="accent" className="h-11 rounded-md px-6 md:px-8">
+          <p className="text-xs md:text-sm text-muted-foreground mb-6 md:mb-8">
+            Your needs change - your support shouldn&apos;t.
+          </p>
+          <Button
+            asChild
+            variant="accent"
+            className="h-11 rounded-md px-6 md:px-8"
+          >
             <Link href="/services">Explore All Services</Link>
           </Button>
         </div>

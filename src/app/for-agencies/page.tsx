@@ -16,7 +16,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Virtual Assistant Solutions for Staffing & Recruiting Agencies",
   description:
-    "Partner with Conciero to offer premium VA services to your clients — white-labeled, scalable, and fully integrated for staffing and recruiting agencies.",
+    "Partner with Conciero to offer premium VA services to your clients - white-labeled, scalable, and fully integrated for staffing and recruiting agencies.",
   path: "/for-agencies",
   keywords: [
     "virtual assistant for agencies",
@@ -136,7 +136,7 @@ export default function ForAgenciesPage() {
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
               Partner with Conciero to offer premium VA services to your clients
-              — white-labeled, scalable, and fully integrated
+              - white-labeled, scalable, and fully integrated
             </p>
             <Button asChild variant="accent" size="lg" className="shadow-lg">
               <Link href="/contact">Become a Partner</Link>
@@ -227,8 +227,8 @@ export default function ForAgenciesPage() {
               Ready to Partner with Conciero?
             </h2>
             <p className="text-lg text-primary-foreground/90 mb-8">
-              Join leading staffing agencies who trust Conciero to power their VA
-              offerings
+              Join leading staffing agencies who trust Conciero to power their
+              VA offerings
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild variant="accent" size="lg">

@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site";
 type SeoInput = {
   title: string;
   description?: string;
-  /** Path beginning with "/" — used for canonical + OG url. */
+  /** Path beginning with "/" - used for canonical + OG url. */
   path: string;
   keywords?: string[];
   ogImage?: string;

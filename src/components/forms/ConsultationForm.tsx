@@ -13,7 +13,7 @@ const FieldError = ({ msg }: { msg?: string }) =>
   msg ? <p className="mt-1 text-xs text-destructive">{msg}</p> : null;
 
 /**
- * Hero consultation form — validation + submit handled by Formik + Yup.
+ * Hero consultation form - validation + submit handled by Formik + Yup.
  * On submit it still calls the `submitConsultation` Server Action (server-side
  * validation + future email/CRM delivery).
  */
@@ -44,7 +44,9 @@ export function ConsultationForm() {
         setStatus("success");
         resetForm();
       } else {
-        setSubmitError(res.message || "Something went wrong. Please try again.");
+        setSubmitError(
+          res.message || "Something went wrong. Please try again.",
+        );
       }
     },
   });
@@ -88,7 +90,9 @@ export function ConsultationForm() {
               maxLength={100}
               {...formik.getFieldProps("name")}
             />
-            <FieldError msg={formik.touched.name ? formik.errors.name : undefined} />
+            <FieldError
+              msg={formik.touched.name ? formik.errors.name : undefined}
+            />
           </div>
           <div>
             <Input
@@ -97,7 +101,9 @@ export function ConsultationForm() {
               maxLength={255}
               {...formik.getFieldProps("email")}
             />
-            <FieldError msg={formik.touched.email ? formik.errors.email : undefined} />
+            <FieldError
+              msg={formik.touched.email ? formik.errors.email : undefined}
+            />
           </div>
           <div>
             <Input
@@ -106,7 +112,9 @@ export function ConsultationForm() {
               maxLength={20}
               {...formik.getFieldProps("phone")}
             />
-            <FieldError msg={formik.touched.phone ? formik.errors.phone : undefined} />
+            <FieldError
+              msg={formik.touched.phone ? formik.errors.phone : undefined}
+            />
           </div>
           <div>
             <Textarea
@@ -115,7 +123,9 @@ export function ConsultationForm() {
               className="min-h-[60px] resize-none"
               {...formik.getFieldProps("message")}
             />
-            <FieldError msg={formik.touched.message ? formik.errors.message : undefined} />
+            <FieldError
+              msg={formik.touched.message ? formik.errors.message : undefined}
+            />
           </div>
           <div>
             <select
@@ -138,7 +148,9 @@ export function ConsultationForm() {
             </select>
           </div>
 
-          {submitError && <p className="text-xs text-destructive">{submitError}</p>}
+          {submitError && (
+            <p className="text-xs text-destructive">{submitError}</p>
+          )}
 
           <Button
             type="submit"

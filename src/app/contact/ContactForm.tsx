@@ -13,7 +13,7 @@ const FieldError = ({ msg }: { msg?: string }) =>
   msg ? <p className="mt-1 text-xs text-destructive">{msg}</p> : null;
 
 /**
- * Contact-page form — validation + submission handled by Formik + Yup, with
+ * Contact-page form - validation + submission handled by Formik + Yup, with
  * delivery via the `submitConsultation` Server Action.
  */
 export function ContactForm() {
@@ -43,7 +43,9 @@ export function ContactForm() {
         setStatus("success");
         resetForm();
       } else {
-        setSubmitError(res.message || "Something went wrong. Please try again.");
+        setSubmitError(
+          res.message || "Something went wrong. Please try again.",
+        );
       }
     },
   });
@@ -75,28 +77,60 @@ export function ContactForm() {
         <label htmlFor="name" className="block text-sm font-medium mb-2">
           Full Name *
         </label>
-        <input id="name" className={inputClass} placeholder="Your name" maxLength={100} {...formik.getFieldProps("name")} />
-        <FieldError msg={formik.touched.name ? formik.errors.name : undefined} />
+        <input
+          id="name"
+          className={inputClass}
+          placeholder="Your name"
+          maxLength={100}
+          {...formik.getFieldProps("name")}
+        />
+        <FieldError
+          msg={formik.touched.name ? formik.errors.name : undefined}
+        />
       </div>
       <div>
         <label htmlFor="email" className="block text-sm font-medium mb-2">
           Email Address *
         </label>
-        <input id="email" type="email" className={inputClass} placeholder="your.email@example.com" maxLength={255} {...formik.getFieldProps("email")} />
-        <FieldError msg={formik.touched.email ? formik.errors.email : undefined} />
+        <input
+          id="email"
+          type="email"
+          className={inputClass}
+          placeholder="your.email@example.com"
+          maxLength={255}
+          {...formik.getFieldProps("email")}
+        />
+        <FieldError
+          msg={formik.touched.email ? formik.errors.email : undefined}
+        />
       </div>
       <div>
         <label htmlFor="phone" className="block text-sm font-medium mb-2">
           Phone Number
         </label>
-        <input id="phone" type="tel" className={inputClass} placeholder="+91 1234567890" maxLength={20} {...formik.getFieldProps("phone")} />
-        <FieldError msg={formik.touched.phone ? formik.errors.phone : undefined} />
+        <input
+          id="phone"
+          type="tel"
+          className={inputClass}
+          placeholder="+91 1234567890"
+          maxLength={20}
+          {...formik.getFieldProps("phone")}
+        />
+        <FieldError
+          msg={formik.touched.phone ? formik.errors.phone : undefined}
+        />
       </div>
       <div>
         <label htmlFor="company" className="block text-sm font-medium mb-2">
           Company (Optional)
         </label>
-        <input id="company" className={inputClass} placeholder="Your company name" maxLength={100} {...formik.getFieldProps("company")} />
+        <input
+          id="company"
+          className={inputClass}
+          placeholder="Your company name"
+          maxLength={100}
+          {...formik.getFieldProps("company")}
+        />
       </div>
       <div>
         <label htmlFor="serviceType" className="block text-sm font-medium mb-2">
@@ -127,7 +161,9 @@ export function ContactForm() {
           maxLength={2000}
           {...formik.getFieldProps("message")}
         />
-        <FieldError msg={formik.touched.message ? formik.errors.message : undefined} />
+        <FieldError
+          msg={formik.touched.message ? formik.errors.message : undefined}
+        />
       </div>
 
       {submitError && <p className="text-xs text-destructive">{submitError}</p>}

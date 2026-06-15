@@ -59,7 +59,7 @@ const audiences = [
   {
     Icon: Briefcase,
     title: "Agencies & Enterprises",
-    body: "Enterprise-grade support with senior talent, security, and compliance built in — ready to white-label or scale.",
+    body: "Enterprise-grade support with senior talent, security, and compliance built in - ready to white-label or scale.",
     href: "/enterprise",
     cta: "View Enterprise",
   },
@@ -76,7 +76,7 @@ const faqs = [
   },
   {
     q: "Is there a long-term commitment?",
-    a: "No. You begin with a 7-day free trial and continue on flexible terms — scale hours up or down, change tasks, or pause whenever your needs change.",
+    a: "No. You begin with a 7-day free trial and continue on flexible terms - scale hours up or down, change tasks, or pause whenever your needs change.",
   },
   {
     q: "How do you keep my information secure?",
@@ -114,7 +114,7 @@ export default function WhyConcieroPage() {
               Why Conciero
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              Senior talent, proactive support, and AI-driven efficiency — built
+              Senior talent, proactive support, and AI-driven efficiency - built
               by founders who understand exactly what modern leaders need.
             </p>
           </div>
@@ -125,18 +125,30 @@ export default function WhyConcieroPage() {
       <WhyConciero />
 
       {/* Stats band */}
-      <section className="py-12 md:py-16" style={{ backgroundColor: "rgb(196, 163, 90)" }}>
+      <section
+        className="py-12 md:py-16"
+        style={{ backgroundColor: "rgb(196, 163, 90)" }}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-3xl mx-auto">
             {stats.map(({ Icon, value, label }) => (
               <div key={label} className="text-center">
-                <div className="flex justify-center mb-3" style={{ color: "rgb(26, 26, 26)" }}>
+                <div
+                  className="flex justify-center mb-3"
+                  style={{ color: "rgb(26, 26, 26)" }}
+                >
                   <Icon className="w-7 h-7" />
                 </div>
-                <div className="text-3xl md:text-4xl font-bold mb-1" style={{ color: "rgb(26, 26, 26)" }}>
+                <div
+                  className="text-3xl md:text-4xl font-bold mb-1"
+                  style={{ color: "rgb(26, 26, 26)" }}
+                >
                   {value}
                 </div>
-                <p className="text-sm" style={{ color: "rgba(26, 26, 26, 0.75)" }}>
+                <p
+                  className="text-sm"
+                  style={{ color: "rgba(26, 26, 26, 0.75)" }}
+                >
                   {label}
                 </p>
               </div>
@@ -225,7 +237,7 @@ export default function WhyConcieroPage() {
             </h2>
             <p className="text-muted-foreground mb-6">
               Book a free consultation and we&apos;ll match you with the right
-              assistant — includes a 7-day free trial, no credit card required.
+              assistant - includes a 7-day free trial, no credit card required.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button asChild variant="accent" size="lg">

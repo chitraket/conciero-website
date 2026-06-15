@@ -31,7 +31,7 @@ const faqs: Faq[] = [
   {
     question: "2. How can a virtual assistant help my business?",
     answer:
-      "A virtual assistant can manage tasks such as email handling, scheduling, data entry, customer support, and research—helping you save time and focus on core business activities.",
+      "A virtual assistant can manage tasks such as email handling, scheduling, data entry, customer support, and research-helping you save time and focus on core business activities.",
   },
   {
     question:
@@ -40,21 +40,19 @@ const faqs: Faq[] = [
       "Hiring a virtual assistant is more cost-effective and flexible. You don't need to pay for office space, employee benefits, or long-term salaries, making it a smart choice for growing businesses.",
   },
   {
-    question:
-      "4. What types of tasks can I outsource to a virtual assistant?",
+    question: "4. What types of tasks can I outsource to a virtual assistant?",
     answer:
       "You can outsource: Administrative tasks; Calendar and email management; Data entry and reporting; Customer support; Research and coordination work.",
   },
   {
-    question:
-      "5. Are virtual assistants reliable for long-term support?",
+    question: "5. Are virtual assistants reliable for long-term support?",
     answer:
       "Yes, especially when you work with a managed service like Conciero. You get consistent, reliable support from trained professionals who understand your workflow.",
   },
   {
     question: "6. Can I hire a virtual assistant on a part-time basis?",
     answer:
-      "Yes, virtual assistant services are flexible. You can hire support based on your needs—whether part-time, full-time, or project-based.",
+      "Yes, virtual assistant services are flexible. You can hire support based on your needs-whether part-time, full-time, or project-based.",
   },
   {
     question: "7. How does Conciero ensure quality and consistency?",
