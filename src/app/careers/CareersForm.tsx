@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useFormik } from "formik";
 
 import { careersSchema } from "@/lib/validations";
-import { submitConsultation, initialContactState } from "@/app/actions/contact";
+import { sendForm } from "@/lib/form-delivery";
 
 const inputClass =
   "flex h-10 w-full rounded-md border border-input px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background";
@@ -13,8 +13,8 @@ const FieldError = ({ msg }: { msg?: string }) =>
   msg ? <p className="mt-1 text-xs text-destructive">{msg}</p> : null;
 
 /**
- * Careers application form - validation + submission handled by Formik + Yup,
- * with delivery via the `submitConsultation` Server Action.
+ * Careers application form - validation by Formik + Yup, delivery via FormSubmit
+ * (static export, browser-side). Submissions email care@conciero.co.
  */
 export function CareersForm() {
   const [submitError, setSubmitError] = useState("");
@@ -37,16 +37,15 @@ export function CareersForm() {
         setStatus("success");
         return;
       }
-      const fd = new FormData();
-      Object.entries(values).forEach(([k, v]) => fd.append(k, String(v ?? "")));
-      const res = await submitConsultation(initialContactState, fd);
-      if (res.status === "success") {
+      const res = await sendForm(
+        `New career application from ${values.name}`,
+        values,
+      );
+      if (res.ok) {
         setStatus("success");
         resetForm();
       } else {
-        setSubmitError(
-          res.message || "Something went wrong. Please try again.",
-        );
+        setSubmitError(res.error);
       }
     },
   });

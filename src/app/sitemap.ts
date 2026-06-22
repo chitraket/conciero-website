@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 
 import { siteConfig } from "@/lib/site";
 
+export const dynamic = "force-static";
+
 /** All public routes, grouped by crawl priority. */
 const routes = {
   primary: [

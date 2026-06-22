@@ -7,15 +7,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { consultationSchema } from "@/lib/validations";
-import { submitConsultation, initialContactState } from "@/app/actions/contact";
+import { sendForm } from "@/lib/form-delivery";
 
 const FieldError = ({ msg }: { msg?: string }) =>
   msg ? <p className="mt-1 text-xs text-destructive">{msg}</p> : null;
 
 /**
- * Hero consultation form - validation + submit handled by Formik + Yup.
- * On submit it still calls the `submitConsultation` Server Action (server-side
- * validation + future email/CRM delivery).
+ * Hero consultation form - validation by Formik + Yup, delivery via FormSubmit
+ * (static export, browser-side). Submissions email care@conciero.co.
  */
 export function ConsultationForm() {
   const [submitError, setSubmitError] = useState("");
@@ -37,16 +36,15 @@ export function ConsultationForm() {
         setStatus("success");
         return;
       }
-      const fd = new FormData();
-      Object.entries(values).forEach(([k, v]) => fd.append(k, String(v ?? "")));
-      const res = await submitConsultation(initialContactState, fd);
-      if (res.status === "success") {
+      const res = await sendForm(
+        `New consultation request from ${values.name}`,
+        values,
+      );
+      if (res.ok) {
         setStatus("success");
         resetForm();
       } else {
-        setSubmitError(
-          res.message || "Something went wrong. Please try again.",
-        );
+        setSubmitError(res.error);
       }
     },
   });
