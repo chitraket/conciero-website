@@ -71,15 +71,6 @@ export function Footer() {
               founders, and global businesses - powered by senior talent,
               proactive support, and AI-driven efficiency.
             </p>
-            <div className="mt-6">
-              <Image
-                src="/assets/trust-badge-d2AQG_wv.png"
-                alt="5.0 Rated - Reviewed on Trustpilot & Clutch"
-                width={160}
-                height={64}
-                className="h-14 md:h-16 w-auto"
-              />
-            </div>
           </div>
 
           {/* Services */}

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Star, Zap, Shield, RefreshCw } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -39,14 +38,6 @@ export function Hero() {
                 </div>
               ))}
             </div>
-            <Image
-              src="/assets/trust-badge-d2AQG_wv.png"
-              alt="5.0 Rated - Reviewed on Trustpilot & Clutch"
-              width={200}
-              height={64}
-              className="h-14 md:h-16 w-auto"
-              priority
-            />
           </div>
           <ConsultationForm />
         </div>
