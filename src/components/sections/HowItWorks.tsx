@@ -22,7 +22,7 @@ const steps: Step[] = [
   },
   {
     num: "03",
-    title: "Start Your 7-Day Free Trial",
+    title: "Start Your 1-Week Free Trial",
     body: "Experience real impact from day one - no upfront commitment.",
   },
   {

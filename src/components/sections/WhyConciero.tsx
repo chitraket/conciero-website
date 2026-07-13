@@ -21,7 +21,7 @@ const reasons: { title: string; body: string }[] = [
   },
   {
     title: "Try Risk-Free, Always",
-    body: "We offer a 7-day free trial and unlimited free replacement, because we believe in the quality of our people.",
+    body: "We offer a 1-week free trial and unlimited free replacement, because we believe in the quality of our people.",
   },
 ];
 

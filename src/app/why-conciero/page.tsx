@@ -76,7 +76,7 @@ const faqs = [
   },
   {
     q: "Is there a long-term commitment?",
-    a: "No. You begin with a 7-day free trial and continue on flexible terms - scale hours up or down, change tasks, or pause whenever your needs change.",
+    a: "No. You begin with a 1-week free trial and continue on flexible terms - scale hours up or down, change tasks, or pause whenever your needs change.",
   },
   {
     q: "How do you keep my information secure?",
@@ -237,7 +237,7 @@ export default function WhyConcieroPage() {
             </h2>
             <p className="text-muted-foreground mb-6">
               Book a free consultation and we&apos;ll match you with the right
-              assistant - includes a 7-day free trial, no credit card required.
+              assistant - includes a 1-week free trial, no credit card required.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button asChild variant="accent" size="lg">

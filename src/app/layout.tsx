@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+import { Toaster } from "react-hot-toast";
+
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingCallButton } from "@/components/layout/FloatingCallButton";
@@ -85,6 +87,14 @@ export default function RootLayout({
       <body className="min-h-screen bg-background">
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            duration: 4000,
+            style: { fontFamily: "var(--font-inter)", fontSize: "14px" },
+            success: { iconTheme: { primary: "#b8962e", secondary: "#fff" } },
+          }}
+        />
         <Header />
         <main>{children}</main>
         <FloatingCallButton />

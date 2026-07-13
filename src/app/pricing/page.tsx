@@ -38,7 +38,7 @@ const standardFeatures = [
   "AI-fluent & automation-ready",
   "Managed by senior team",
   "Unlimited free replacement",
-  "7-day free trial",
+  "1-week free trial",
 ];
 
 const fullTimeFeatures = [
@@ -47,7 +47,7 @@ const fullTimeFeatures = [
   "Business + life coordination",
   "Senior oversight & quality control",
   "Unlimited free replacement",
-  "7-day free trial",
+  "1-week free trial",
 ];
 
 const elitePartTimeFeatures = [
@@ -57,7 +57,7 @@ const elitePartTimeFeatures = [
   "Specialist bench access (design, web, automation)",
   "Business + personal coordination",
   "Unlimited free replacement",
-  "7-day free trial",
+  "1-week free trial",
 ];
 
 const eliteFullTimeFeatures = [
@@ -67,7 +67,7 @@ const eliteFullTimeFeatures = [
   "Full specialist bench access",
   "Proactive workflow management",
   "Unlimited free replacement",
-  "7-day free trial",
+  "1-week free trial",
 ];
 
 const standardRoles = [
@@ -102,7 +102,7 @@ type IncludedFeature = {
 const includedFeatures: IncludedFeature[] = [
   {
     Icon: Play,
-    title: "7-Day Free Trial",
+    title: "1-Week Free Trial",
     description: "Experience real work before you commit.",
   },
   {
@@ -164,7 +164,7 @@ const steps: Step[] = [
   },
   {
     num: "03",
-    title: "Start Your 7-Day Free Trial",
+    title: "Start Your 1-Week Free Trial",
     description: "Experience real impact from day one - no upfront commitment.",
   },
   {
@@ -195,7 +195,7 @@ export default function PricingPage() {
               className="text-sm text-muted-foreground/80 animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
-              Senior-level assistants • 7-day free trial • No long-term lock-in
+              Senior-level assistants • 1-week free trial • No long-term lock-in
             </p>
           </div>
           <div className="text-center mb-8 lg:mb-10">

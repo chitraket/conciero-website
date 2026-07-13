@@ -63,10 +63,10 @@ export default function RefundPage() {
             </div>
             <div className="bg-accent/5 border border-accent/20 rounded-xl p-5 md:p-6 mb-6">
               <h2 className="text-xl md:text-2xl font-bold mb-4 text-foreground flex items-center gap-3">
-                <Clock className="w-6 h-6 text-accent" />7-Day Free Trial
+                <Clock className="w-6 h-6 text-accent" />1-Week Free Trial
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                All new clients receive a 7-day free trial to experience our
+                All new clients receive a 1-week free trial to experience our
                 services:
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground">
