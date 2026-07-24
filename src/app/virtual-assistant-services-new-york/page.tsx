@@ -116,11 +116,11 @@ export default function VirtualAssistantNewYorkPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <Link
-              className="inline-flex items-center text-accent hover:text-accent/80 mb-6"
+              className="flex w-fit items-center text-accent hover:text-accent/80 mb-6"
               href="/resources"
+              aria-label="Back to Resources"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Resources
+              <ArrowLeft className="w-4 h-4" />
             </Link>
             <span className="text-sm text-muted-foreground">Apr 24, 2026</span>
 

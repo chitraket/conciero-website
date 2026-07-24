@@ -1,19 +1,23 @@
 import Image from "next/image";
 
-const logos: { src: string; alt: string; className: string }[] = [
-  { src: "/assets/doordash-Dm5DMzcm.png", alt: "DoorDash", className: "h-24 w-auto object-contain" },
-  { src: "/assets/zomato-Bw38zjGU.png", alt: "Zomato", className: "h-20 w-auto object-contain" },
-  { src: "/assets/instacart-D9XXjjsM.png", alt: "Instacart", className: "h-8 w-auto object-contain" },
-  { src: "/assets/careem-BiZZp_Fe.png", alt: "Careem", className: "h-8 w-auto object-contain" },
-  { src: "/assets/amazon-BDNKGPvw.png", alt: "Amazon", className: "h-8 w-auto object-contain" },
-  { src: "/assets/uber-LOJkVMZ6.png", alt: "Uber", className: "h-8 w-auto object-contain" },
-  { src: "/assets/tcs-D-6uohpF.png", alt: "TCS", className: "h-8 w-auto object-contain" },
-  { src: "/assets/emirates-CN5PEcJc.png", alt: "Emirates", className: "h-8 w-auto object-contain" },
-  { src: "/assets/ey-CXxAfv-4.png", alt: "EY", className: "h-8 w-auto object-contain" },
-  { src: "/assets/amex-CXR0fG8s.png", alt: "American Express", className: "h-8 w-auto object-contain" },
-  { src: "/assets/marriott-9-sgUbm-.png", alt: "Marriott", className: "h-8 w-auto object-contain" },
-  { src: "/assets/taj-BogCt28_.png", alt: "Taj Hotels", className: "h-8 w-auto object-contain" },
-  { src: "/assets/emaar-DzwN1O8b.png", alt: "Emaar", className: "h-8 w-auto object-contain" },
+// width/height below are proportional to each logo's real file dimensions at its
+// intended display height, so next/image never has to fight a CSS override on
+// only one axis (that mismatch is what triggers the "width or height modified,
+// but not the other" dev warning).
+const logos: { src: string; alt: string; width: number; height: number }[] = [
+  { src: "/assets/doordash-Dm5DMzcm.png", alt: "DoorDash", width: 94, height: 96 },
+  { src: "/assets/zomato-Bw38zjGU.png", alt: "Zomato", width: 80, height: 80 },
+  { src: "/assets/instacart-D9XXjjsM.png", alt: "Instacart", width: 200, height: 32 },
+  { src: "/assets/careem-BiZZp_Fe.png", alt: "Careem", width: 153, height: 32 },
+  { src: "/assets/amazon-BDNKGPvw.png", alt: "Amazon", width: 106, height: 32 },
+  { src: "/assets/uber-LOJkVMZ6.png", alt: "Uber", width: 91, height: 32 },
+  { src: "/assets/tcs-D-6uohpF.png", alt: "TCS", width: 80, height: 32 },
+  { src: "/assets/emirates-CN5PEcJc.png", alt: "Emirates", width: 46, height: 32 },
+  { src: "/assets/ey-CXxAfv-4.png", alt: "EY", width: 32, height: 32 },
+  { src: "/assets/amex-CXR0fG8s.png", alt: "American Express", width: 32, height: 32 },
+  { src: "/assets/marriott-9-sgUbm-.png", alt: "Marriott", width: 141, height: 32 },
+  { src: "/assets/taj-BogCt28_.png", alt: "Taj Hotels", width: 36, height: 32 },
+  { src: "/assets/emaar-DzwN1O8b.png", alt: "Emaar", width: 161, height: 32 },
 ];
 
 function LogoRow() {
@@ -24,7 +28,13 @@ function LogoRow() {
           key={logo.alt}
           className="flex-shrink-0 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity w-36 h-14"
         >
-          <Image src={logo.src} alt={logo.alt} width={144} height={56} className={logo.className} />
+          <Image
+            src={logo.src}
+            alt={logo.alt}
+            width={logo.width}
+            height={logo.height}
+            className="object-contain"
+          />
         </div>
       ))}
     </div>

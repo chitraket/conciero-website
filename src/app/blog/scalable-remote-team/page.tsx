@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -65,7 +66,7 @@ export default function Page() {
           headline: "Building a Scalable Remote Team in 2024",
           description:
             "Practical strategies for building and managing distributed teams with virtual assistants. Learn proven approaches for remote team success.",
-          image: "https://conciero.co/og-image.png",
+          image: "https://conciero.co/assets/blog/scalable-remote-team-hero.png",
           author: { "@type": "Organization", name: "Conciero" },
           publisher: {
             "@type": "Organization",
@@ -82,11 +83,23 @@ export default function Page() {
       <article className="pt-28 md:pt-36 pb-12 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <Link className="inline-flex items-center text-accent hover:text-accent/80 mb-6" href="/resources">
-              <ArrowLeft className="w-4 h-4 mr-2" />Back to Resources
+            <Link className="flex w-fit items-center text-accent hover:text-accent/80 mb-6" href="/resources" aria-label="Back to Resources">
+              <ArrowLeft className="w-4 h-4" />
             </Link>
             <span className="text-sm text-muted-foreground">Mar 5, 2024</span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-6 text-foreground">Building a Scalable Remote Team in 2024</h1>
+
+            <div className="rounded-2xl border border-border shadow-luxury overflow-hidden mb-8">
+              <Image
+                src="/assets/blog/scalable-remote-team-hero.png"
+                alt="Org-chart style network of connected nodes representing a scaling team"
+                width={1200}
+                height={630}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+
             <p className="text-lg text-muted-foreground mb-8">Practical strategies for building and managing distributed teams with virtual assistants.</p>
             <div className="prose prose-lg max-w-none">
               <p className="text-muted-foreground mb-6">Remote work has evolved from a temporary necessity to a permanent competitive advantage. Companies that master distributed team management access global talent, reduce overhead, and build resilient organizations. Here&apos;s how to do it right.</p>

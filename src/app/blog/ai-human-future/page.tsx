@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Bot, Users, Sparkles, Shield } from "lucide-react";
 
@@ -30,6 +31,7 @@ export default function Page() {
           headline: "AI + Human: The Future of Virtual Assistance",
           description:
             "How combining AI automation with human expertise creates the perfect virtual assistant experience for modern businesses.",
+          image: "https://conciero.co/assets/blog/ai-human-future-hero.png",
           author: { "@type": "Organization", name: "Conciero" },
           publisher: {
             "@type": "Organization",
@@ -46,16 +48,28 @@ export default function Page() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <Link
-              className="inline-flex items-center text-accent hover:text-accent/80 mb-6"
+              className="flex w-fit items-center text-accent hover:text-accent/80 mb-6"
               href="/resources"
+              aria-label="Back to Resources"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Resources
+              <ArrowLeft className="w-4 h-4" />
             </Link>
             <span className="text-sm text-muted-foreground">Mar 10, 2024</span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-6 text-foreground">
               AI + Human: The Future of Virtual Assistance
             </h1>
+
+            <div className="rounded-2xl border border-border shadow-luxury overflow-hidden mb-8">
+              <Image
+                src="/assets/blog/ai-human-future-hero.png"
+                alt="A human node at the center of a connected network of AI nodes"
+                width={1200}
+                height={630}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+
             <p className="text-lg text-muted-foreground mb-8">
               How combining AI automation with human expertise creates the
               perfect virtual assistant experience.

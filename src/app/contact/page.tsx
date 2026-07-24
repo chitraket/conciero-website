@@ -104,7 +104,7 @@ export default function ContactPage() {
 
                 {/* Call */}
                 <a
-                  href="tel:+13373372363"
+                  href="tel:+13373373329"
                   className="group flex items-center gap-4 p-4 rounded-xl border border-border/50 bg-card transition-all duration-200 hover:border-accent/40 hover:shadow-sm"
                 >
                   <div className="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-accent/10 transition-all duration-200 group-hover:bg-accent">
@@ -112,7 +112,7 @@ export default function ContactPage() {
                   </div>
                   <div className="flex-1">
                     <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Call Us</p>
-                    <p className="font-semibold">+1 337 337 2363</p>
+                    <p className="font-semibold">+1 337 337 3329</p>
                     <p className="text-xs text-accent mt-0.5">Click to call now</p>
                   </div>
                   <ArrowRight className="w-4 h-4 text-muted-foreground transition-all duration-200 group-hover:text-accent group-hover:translate-x-1 shrink-0" />

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
@@ -93,7 +94,7 @@ export default function Page() {
           headline: "Concierge Services in New York",
           description:
             "Looking for concierge services in New York? Discover premium personal, travel, and corporate concierge solutions to save time and access exclusive experiences.",
-          image: "https://conciero.co/assets/blogs.webp",
+          image: "https://conciero.co/assets/blog/concierge-services-nyc-hero.png",
           author: { "@type": "Organization", name: "Conciero" },
           publisher: {
             "@type": "Organization",
@@ -121,12 +122,24 @@ export default function Page() {
       <article className="pt-28 md:pt-36 pb-12 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <Link className="inline-flex items-center text-accent hover:text-accent/80 mb-6" href="/resources">
-              <ArrowLeft className="w-4 h-4 mr-2" />Back to Resources
+            <Link className="flex w-fit items-center text-accent hover:text-accent/80 mb-6" href="/resources" aria-label="Back to Resources">
+              <ArrowLeft className="w-4 h-4" />
             </Link>
 
             <span className="text-sm text-muted-foreground">Apr 29, 2026</span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-6 text-foreground">Concierge Services in New York</h1>
+
+            <div className="rounded-2xl border border-border shadow-luxury overflow-hidden mb-8">
+              <Image
+                src="/assets/blog/concierge-services-nyc-hero.png"
+                alt="Concentric service rings radiating across the New York skyline"
+                width={1200}
+                height={630}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+
             <p className="text-lg text-muted-foreground mb-8">Concierge Services in New York: A Complete Guide to Luxury, Convenience &amp; Time Management</p>
 
             <div className="prose prose-lg max-w-none">

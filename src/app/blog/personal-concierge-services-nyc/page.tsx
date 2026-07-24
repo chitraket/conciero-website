@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 import { buildMetadata } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -120,7 +121,9 @@ export default function Page() {
       <article className="pt-28 md:pt-36 pb-12 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <Link className="inline-flex items-center text-accent hover:text-accent/80 mb-6" href="/resources">Back to Resources</Link>
+            <Link className="flex w-fit items-center text-accent hover:text-accent/80 mb-6" href="/resources" aria-label="Back to Resources">
+              <ArrowLeft className="w-4 h-4" />
+            </Link>
             <span className="text-sm text-muted-foreground">Apr 29, 2026</span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-6 text-foreground">Personal Concierge Services NYC</h1>
             <p className="text-lg text-muted-foreground mb-8">Personal Concierge Services NYC: The Ultimate Guide to Luxury, Convenience, and Time Freedom</p>

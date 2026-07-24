@@ -38,6 +38,8 @@ const routes = {
     "/resources/platform-demo",
   ],
   blog: [
+    "/blog/authority-document-delegation-template",
+    "/blog/signs-you-need-an-executive-assistant",
     "/blog/ai-human-future",
     "/blog/ten-tasks-to-delegate",
     "/blog/personal-concierge-services-nyc",

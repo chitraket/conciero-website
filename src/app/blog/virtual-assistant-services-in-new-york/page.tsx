@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -37,7 +38,7 @@ export default function Page() {
           headline: "Virtual Assistant Services in New York",
           description:
             "Explore how premium virtual assistant services in New York help founders and teams reclaim time, move faster, and stay organized.",
-          image: "https://conciero.co/og-image.png",
+          image: "https://conciero.co/assets/blog/virtual-assistant-nyc-hero.png",
           author: { "@type": "Organization", name: "Conciero" },
           publisher: {
             "@type": "Organization",
@@ -56,17 +57,29 @@ export default function Page() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <Link
-              className="inline-flex items-center text-accent hover:text-accent/80 mb-6"
+              className="flex w-fit items-center text-accent hover:text-accent/80 mb-6"
               href="/resources"
+              aria-label="Back to Resources"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Resources
+              <ArrowLeft className="w-4 h-4" />
             </Link>
 
             <span className="text-sm text-muted-foreground">Apr 24, 2026</span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 mb-6 text-foreground">
               Virtual Assistant Services in New York
             </h1>
+
+            <div className="rounded-2xl border border-border shadow-luxury overflow-hidden mb-8">
+              <Image
+                src="/assets/blog/virtual-assistant-nyc-hero.png"
+                alt="Radiating support rings around a gold node, representing on-demand assistance"
+                width={1200}
+                height={630}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+
             <p className="text-lg text-muted-foreground mb-8">
               A practical guide for NYC founders, executives, and growing teams
               who want senior-level support-without the overhead.

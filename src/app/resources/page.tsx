@@ -97,6 +97,20 @@ type BlogPost = {
 
 const posts: BlogPost[] = [
   {
+    date: "Jul 24, 2026",
+    title: "The Authority Document: A 1-Page Template That Changed Everything",
+    description:
+      "Most delegation fails because founders never define authority. The authority document is a 1-page template that solves this in 30 minutes.",
+    href: "/blog/authority-document-delegation-template",
+  },
+  {
+    date: "Jul 22, 2026",
+    title: "7 Signs You Need an Executive Assistant (Even If You Do Not Feel Ready)",
+    description:
+      "The 7 concrete signs you are ready to hire an executive assistant, plus the 3 warning signs that mean you are not.",
+    href: "/blog/signs-you-need-an-executive-assistant",
+  },
+  {
     date: "Apr 29, 2026",
     title: "Business Concierge Services New York",
     description:

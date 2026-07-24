@@ -12,8 +12,8 @@ export const siteConfig = {
     "Conciero offers premium virtual assistant, executive support, and concierge services to help businesses and professionals manage tasks efficiently.",
   ogImage:
     "https://storage.googleapis.com/gpt-engineer-file-uploads/hvgLofdVYpX4LUASj0z1hyjJXwQ2/social-images/social-1767038421276-icon.png",
-  phone: "+13373372363",
-  phoneDisplay: "+1 337 337 2363",
+  phone: "+13373373329",
+  phoneDisplay: "+1 337 337 3329",
   whatsapp: "+919187116589",
   whatsappDisplay: "+91 91871 16589",
   calendly: "https://calendly.com/care-conciero/conciero-15mins-discussion",
