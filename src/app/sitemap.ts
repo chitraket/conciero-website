@@ -40,6 +40,8 @@ const routes = {
   blog: [
     "/blog/authority-document-delegation-template",
     "/blog/signs-you-need-an-executive-assistant",
+    "/blog/virtual-assistant-vs-executive-assistant",
+    "/blog/why-we-stopped-tracking-hours-saved",
     "/blog/ai-human-future",
     "/blog/ten-tasks-to-delegate",
     "/blog/personal-concierge-services-nyc",

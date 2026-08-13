@@ -111,6 +111,20 @@ const posts: BlogPost[] = [
     href: "/blog/signs-you-need-an-executive-assistant",
   },
   {
+    date: "Jul 29, 2026",
+    title: "Virtual Assistant vs Executive Assistant: Which Do You Actually Need?",
+    description:
+      "The real difference is authority, not location or title. Compare pricing, scope, and continuity to figure out which one you actually need.",
+    href: "/blog/virtual-assistant-vs-executive-assistant",
+  },
+  {
+    date: "Jul 31, 2026",
+    title: "Why We Stopped Tracking Hours Saved (And What We Track Instead)",
+    description:
+      "Every VA company sells hours saved. We stopped. Across 47 founders, we track decisions cleared instead, the median moves from 6 to 74/week in 90 days.",
+    href: "/blog/why-we-stopped-tracking-hours-saved",
+  },
+  {
     date: "Apr 29, 2026",
     title: "Business Concierge Services New York",
     description:
