@@ -42,6 +42,8 @@ const routes = {
     "/blog/signs-you-need-an-executive-assistant",
     "/blog/virtual-assistant-vs-executive-assistant",
     "/blog/why-we-stopped-tracking-hours-saved",
+    "/blog/executive-assistant-cost-2026",
+    "/blog/what-to-delegate-first",
     "/blog/ai-human-future",
     "/blog/ten-tasks-to-delegate",
     "/blog/personal-concierge-services-nyc",

@@ -17,7 +17,7 @@ import { buildMetadata } from "@/lib/seo";
 import { CareersForm } from "./CareersForm";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Careers at Conciero - Join Our Global Team",
+  title: "Careers - Join Our Global Team",
   description:
     "Build a career that grows with you. Join Conciero's global team of senior virtual assistants and concierge professionals. 100% remote, continuous growth, and meaningful work.",
   path: "/careers",

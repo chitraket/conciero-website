@@ -5,11 +5,11 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Virtual Assistant vs Executive Assistant: Which Do You Actually Need? | Conciero Blog",
+  title: "Virtual Assistant vs Executive Assistant: Which Do You Actually Need?",
   description:
     "Virtual assistant vs executive assistant: the real difference is authority, not location or title. Compare pricing, scope, and continuity to figure out which one you actually need.",
   path: "/blog/virtual-assistant-vs-executive-assistant",
@@ -172,6 +172,13 @@ export default function Page() {
             acceptedAnswer: { "@type": "Answer", text: f.a },
           })),
         }}
+      />
+
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Blog", path: "/resources" },
+          { name: "Virtual Assistant vs Executive Assistant: Which Do You Actually Need?", path: "/blog/virtual-assistant-vs-executive-assistant" },
+        ])}
       />
 
       <article className="pt-28 md:pt-36 pb-12 md:pb-16">

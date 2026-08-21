@@ -4,7 +4,7 @@ import { FileText, Scale, Ban, CreditCard, Shield, TriangleAlert } from "lucide-
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Terms & Conditions - Conciero",
+  title: "Terms & Conditions",
   description:
     "Read Conciero's terms and conditions for using our virtual assistant and concierge services. Understand your rights and responsibilities as a user.",
   path: "/terms",

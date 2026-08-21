@@ -5,11 +5,11 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = buildMetadata({
-  title: "7 Signs You Need an Executive Assistant: The Founder's Diagnostic | Conciero Blog",
+  title: "7 Signs You Need an Executive Assistant: The Founder's Diagnostic",
   description:
     "The 7 concrete signs you are ready to hire an executive assistant, plus the 3 warning signs that mean you are not. Stop mistaking overwhelmed for ready. Diagnostic + next steps.",
   path: "/blog/signs-you-need-an-executive-assistant",
@@ -187,6 +187,13 @@ export default function Page() {
             acceptedAnswer: { "@type": "Answer", text: f.a },
           })),
         }}
+      />
+
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Blog", path: "/resources" },
+          { name: "7 Signs You Need an Executive Assistant (Even If You Do Not Feel Ready)", path: "/blog/signs-you-need-an-executive-assistant" },
+        ])}
       />
 
       <article className="pt-28 md:pt-36 pb-12 md:pb-16">

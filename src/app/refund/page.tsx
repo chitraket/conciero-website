@@ -11,7 +11,7 @@ import {
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Refund Policy - Conciero",
+  title: "Refund Policy",
   description:
     "Learn about Conciero's refund policy for virtual assistant and concierge services. Understand our commitment to customer satisfaction and fair refund practices.",
   path: "/refund",

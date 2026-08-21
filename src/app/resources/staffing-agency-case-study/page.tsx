@@ -4,6 +4,8 @@ import { ArrowLeft, Award, Building2, TrendingUp, Users } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { buildMetadata } from "@/lib/seo";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
   title: "Staffing Agency Success Story | Case Study",
@@ -35,6 +37,33 @@ const results = [
 
 export default function Page() {
   return (
+    <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "Staffing Agency Success Story",
+          description: "How a recruiting firm used Conciero to offer white-label VA services to 50+ clients, growing revenue by 200%.",
+          image: siteConfig.ogImage,
+          author: { "@type": "Organization", name: "Conciero" },
+          publisher: {
+            "@type": "Organization",
+            name: "Conciero",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://conciero.co/assets/logo-X1-8k2Vp.png",
+            },
+          },
+          mainEntityOfPage: "https://conciero.co/resources/staffing-agency-case-study",
+        }}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Resources", path: "/resources" },
+          { name: "Staffing Agency Success Story", path: "/resources/staffing-agency-case-study" },
+        ])}
+      />
+
     <article className="pt-28 md:pt-36 pb-12 md:pb-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
@@ -151,5 +180,6 @@ export default function Page() {
         </div>
       </div>
     </article>
+    </>
   );
 }

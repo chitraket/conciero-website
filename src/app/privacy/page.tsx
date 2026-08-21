@@ -4,7 +4,7 @@ import { Shield, Eye, Database, Lock, Globe, Mail } from "lucide-react";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Privacy Policy - Conciero",
+  title: "Privacy Policy",
   description:
     "Learn how Conciero protects your personal information and data. Our comprehensive privacy policy outlines our commitment to data security and user privacy.",
   path: "/privacy",

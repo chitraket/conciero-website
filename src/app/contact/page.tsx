@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Conciero | Hire Virtual Assistant Services",
+  title: "Contact Us | Hire Virtual Assistant Services",
   description:
     "Contact Conciero to hire expert virtual assistant and business support services. Get reliable support for operations, admin tasks, and global business growth.",
   path: "/contact",

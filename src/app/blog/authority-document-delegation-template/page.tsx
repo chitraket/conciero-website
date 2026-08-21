@@ -5,11 +5,11 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = buildMetadata({
-  title: "The Authority Document: 1-Page Delegation Template for Founders | Conciero Blog",
+  title: "The Authority Document: 1-Page Delegation Template for Founders",
   description:
     "Most delegation fails because founders never define authority. The authority document is a 1-page template (3 columns, 8-10 rows) that solves this in 30 minutes. Used with 47+ founders.",
   path: "/blog/authority-document-delegation-template",
@@ -128,6 +128,13 @@ export default function Page() {
             acceptedAnswer: { "@type": "Answer", text: f.a },
           })),
         }}
+      />
+
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Blog", path: "/resources" },
+          { name: "The Authority Document: A 1-Page Template That Changed Everything", path: "/blog/authority-document-delegation-template" },
+        ])}
       />
 
       <article className="pt-28 md:pt-36 pb-12 md:pb-16">

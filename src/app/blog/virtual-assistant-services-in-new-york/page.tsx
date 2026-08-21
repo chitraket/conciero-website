@@ -11,11 +11,11 @@ import {
 } from "lucide-react";
 
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Virtual Assistant Services in New York | Conciero Blog",
+  title: "Virtual Assistant Services in New York",
   description:
     "Explore how premium virtual assistant services in New York help founders and teams reclaim time, move faster, and stay organized.",
   path: "/blog/virtual-assistant-services-in-new-york",
@@ -51,6 +51,13 @@ export default function Page() {
           mainEntityOfPage:
             "https://conciero.co/blog/virtual-assistant-services-in-new-york",
         }}
+      />
+
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Blog", path: "/resources" },
+          { name: "Virtual Assistant Services in New York", path: "/blog/virtual-assistant-services-in-new-york" },
+        ])}
       />
 
       <article className="pt-28 md:pt-36 pb-12 md:pb-16">

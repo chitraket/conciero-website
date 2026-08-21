@@ -4,9 +4,11 @@ import { ArrowLeft, CircleAlert, CircleCheck, Lightbulb } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { buildMetadata } from "@/lib/seo";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Best Practices for Task Delegation | Conciero Guide",
+  title: "Best Practices for Task Delegation",
   description:
     "Expert tips on how to effectively delegate tasks to your virtual assistant team. Learn proven strategies for maximum productivity.",
   path: "/resources/task-delegation",
@@ -30,6 +32,33 @@ const delegateItems = [
 
 export default function Page() {
   return (
+    <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "Best Practices for Task Delegation",
+          description: "Expert tips on how to effectively delegate tasks to your virtual assistant team. Learn proven strategies for maximum productivity.",
+          image: siteConfig.ogImage,
+          author: { "@type": "Organization", name: "Conciero" },
+          publisher: {
+            "@type": "Organization",
+            name: "Conciero",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://conciero.co/assets/logo-X1-8k2Vp.png",
+            },
+          },
+          mainEntityOfPage: "https://conciero.co/resources/task-delegation",
+        }}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Resources", path: "/resources" },
+          { name: "Best Practices for Task Delegation", path: "/resources/task-delegation" },
+        ])}
+      />
+
     <article className="pt-28 md:pt-36 pb-12 md:pb-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
@@ -168,5 +197,6 @@ export default function Page() {
         </div>
       </div>
     </article>
+    </>
   );
 }

@@ -11,9 +11,11 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { buildMetadata } from "@/lib/seo";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Platform Overview & Features | Conciero",
+  title: "Platform Overview & Features",
   description:
     "Discover the Conciero platform features, capabilities, and learn how to get started with your virtual assistant.",
   path: "/resources/platform-demo",
@@ -60,6 +62,33 @@ const learnItems = [
 
 export default function Page() {
   return (
+    <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "Platform Overview & Features",
+          description: "Discover the Conciero platform features, capabilities, and learn how to get started with your virtual assistant.",
+          image: siteConfig.ogImage,
+          author: { "@type": "Organization", name: "Conciero" },
+          publisher: {
+            "@type": "Organization",
+            name: "Conciero",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://conciero.co/assets/logo-X1-8k2Vp.png",
+            },
+          },
+          mainEntityOfPage: "https://conciero.co/resources/platform-demo",
+        }}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Resources", path: "/resources" },
+          { name: "Platform Overview & Features", path: "/resources/platform-demo" },
+        ])}
+      />
+
     <article className="pt-28 md:pt-36 pb-12 md:pb-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
@@ -145,5 +174,6 @@ export default function Page() {
         </div>
       </div>
     </article>
+    </>
   );
 }

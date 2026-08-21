@@ -17,11 +17,11 @@ import {
 } from "lucide-react";
 
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = buildMetadata({
-  title: "10 Tasks You Should Delegate to a Virtual Assistant | Conciero Blog",
+  title: "10 Tasks You Should Delegate to a Virtual Assistant",
   description:
     "Stop wasting time on repetitive tasks. Discover the top 10 tasks that virtual assistants excel at handling for busy professionals.",
   path: "/blog/ten-tasks-to-delegate",
@@ -108,6 +108,13 @@ export default function Page() {
           },
           mainEntityOfPage: "https://conciero.co/blog/ten-tasks-to-delegate",
         }}
+      />
+
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Blog", path: "/resources" },
+          { name: "10 Tasks You Should Delegate to a Virtual Assistant Today", path: "/blog/ten-tasks-to-delegate" },
+        ])}
       />
 
       <article className="pt-28 md:pt-36 pb-12 md:pb-16">

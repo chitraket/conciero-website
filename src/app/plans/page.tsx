@@ -5,9 +5,9 @@ import { Check } from "lucide-react";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Conciero - Premium Virtual Assistants | Global VA Services",
+  title: "Service Plans & Add-Ons: Starter, Team, Business & Enterprise",
   description:
-    "Conciero provides senior-level virtual assistants and concierge services to seamlessly manage work, personal life & daily operations for clients",
+    "Compare Conciero's Starter, Team, Business, and Enterprise service plans, plus add-ons like extra hours, priority support, and specialist access.",
   path: "/plans",
   keywords: [
     "virtual assistant",

@@ -5,11 +5,11 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { buildMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Why We Stopped Tracking Hours Saved (And What We Track Instead) | Conciero Blog",
+  title: "Why We Stopped Tracking Hours Saved (And What We Track Instead)",
   description:
     "Every VA company sells hours saved. We stopped. Across 47 founders, we track decisions cleared instead, the median moves from 6 to 74/week in 90 days. Here is why this metric matters more.",
   path: "/blog/why-we-stopped-tracking-hours-saved",
@@ -122,6 +122,13 @@ export default function Page() {
             acceptedAnswer: { "@type": "Answer", text: f.a },
           })),
         }}
+      />
+
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Blog", path: "/resources" },
+          { name: "Why We Stopped Tracking Hours Saved (And What We Track Instead)", path: "/blog/why-we-stopped-tracking-hours-saved" },
+        ])}
       />
 
       <article className="pt-28 md:pt-36 pb-12 md:pb-16">

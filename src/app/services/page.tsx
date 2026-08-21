@@ -24,7 +24,7 @@ import { buildMetadata } from "@/lib/seo";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services - Conciero",
+  title: "Virtual Assistant & Concierge Services",
   description:
     "Explore Conciero's comprehensive virtual assistant and concierge services. From personal concierge to business support, we deliver seamless assistance tailored to your needs.",
   path: "/services",

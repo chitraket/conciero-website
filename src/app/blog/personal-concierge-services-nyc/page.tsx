@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 import { ConsultationForm } from "@/components/forms/ConsultationForm";
 
 export const metadata: Metadata = buildMetadata({
@@ -116,6 +116,13 @@ export default function Page() {
             acceptedAnswer: { "@type": "Answer", text: f.a },
           })),
         }}
+      />
+
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Blog", path: "/resources" },
+          { name: "Personal Concierge Services NYC", path: "/blog/personal-concierge-services-nyc" },
+        ])}
       />
 
       <article className="pt-28 md:pt-36 pb-12 md:pb-16">

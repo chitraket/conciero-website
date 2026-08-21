@@ -41,3 +41,21 @@ export const websiteSchema = {
   name: siteConfig.name,
   url: siteConfig.url,
 };
+
+/**
+ * BreadcrumbList schema for a nested page (e.g. a blog post or resource).
+ * Pass the trail from (but excluding) Home down to the current page.
+ */
+export function breadcrumbSchema(trail: { name: string; path: string }[]) {
+  const items = [{ name: "Home", path: "/" }, ...trail];
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: `${siteConfig.url}${item.path === "/" ? "" : item.path}`,
+    })),
+  };
+}

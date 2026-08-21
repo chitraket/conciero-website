@@ -4,6 +4,8 @@ import { ArrowLeft, BarChart3, CircleCheck, PiggyBank, TrendingUp } from "lucide
 
 import { Button } from "@/components/ui/button";
 import { buildMetadata } from "@/lib/seo";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
   title: "The ROI of Virtual Assistants in 2024 | Whitepaper",
@@ -32,6 +34,33 @@ const costPoints = [
 
 export default function Page() {
   return (
+    <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "The ROI of Virtual Assistants in 2024",
+          description: "Data-driven insights on cost savings, productivity gains, and business impact of virtual assistant services for modern businesses.",
+          image: siteConfig.ogImage,
+          author: { "@type": "Organization", name: "Conciero" },
+          publisher: {
+            "@type": "Organization",
+            name: "Conciero",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://conciero.co/assets/logo-X1-8k2Vp.png",
+            },
+          },
+          mainEntityOfPage: "https://conciero.co/resources/roi-whitepaper",
+        }}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Resources", path: "/resources" },
+          { name: "The ROI of Virtual Assistants in 2024", path: "/resources/roi-whitepaper" },
+        ])}
+      />
+
     <article className="pt-28 md:pt-36 pb-12 md:pb-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
@@ -142,5 +171,6 @@ export default function Page() {
         </div>
       </div>
     </article>
+    </>
   );
 }

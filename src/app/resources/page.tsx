@@ -5,9 +5,9 @@ import { FileText, BookOpen, Download, type LucideIcon } from "lucide-react";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Conciero - Premium Virtual Assistants | Global VA Services",
+  title: "Resources & Insights: Guides, Case Studies & Blog",
   description:
-    "Conciero provides senior-level virtual assistants and concierge services to seamlessly manage work, personal life & daily operations for clients",
+    "Guides, case studies, and best practices for maximizing virtual assistant productivity, plus the latest posts from the Conciero blog.",
   path: "/resources",
   keywords: [
     "virtual assistant",
@@ -123,6 +123,20 @@ const posts: BlogPost[] = [
     description:
       "Every VA company sells hours saved. We stopped. Across 47 founders, we track decisions cleared instead, the median moves from 6 to 74/week in 90 days.",
     href: "/blog/why-we-stopped-tracking-hours-saved",
+  },
+  {
+    date: "Aug 5, 2026",
+    title: "How Much Should You Pay an Executive Assistant in 2026?",
+    description:
+      "Executive assistant cost in 2026 ranges from $18/hr to $250K/year. Compare 4 tiers: task-based VAs, dedicated virtual EAs, premium managed services, and in-house hires.",
+    href: "/blog/executive-assistant-cost-2026",
+  },
+  {
+    date: "Aug 7, 2026",
+    title: "What Tasks Should a Founder Delegate First? (2026 Guide)",
+    description:
+      "The 5 tasks every founder should delegate first: calendar, inbox triage, document chasing, expense approvals under $500, and travel logistics.",
+    href: "/blog/what-to-delegate-first",
   },
   {
     date: "Apr 29, 2026",

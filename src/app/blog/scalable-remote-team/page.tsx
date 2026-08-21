@@ -11,11 +11,11 @@ import {
 } from "lucide-react";
 
 import { buildMetadata } from "@/lib/seo";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Building a Scalable Remote Team in 2024 | Conciero Blog",
+  title: "Building a Scalable Remote Team in 2024",
   description:
     "Practical strategies for building and managing distributed teams with virtual assistants. Learn proven approaches for remote team success.",
   path: "/blog/scalable-remote-team",
@@ -78,6 +78,13 @@ export default function Page() {
           },
           mainEntityOfPage: "https://conciero.co/blog/scalable-remote-team",
         }}
+      />
+
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Blog", path: "/resources" },
+          { name: "Building a Scalable Remote Team in 2024", path: "/blog/scalable-remote-team" },
+        ])}
       />
 
       <article className="pt-28 md:pt-36 pb-12 md:pb-16">

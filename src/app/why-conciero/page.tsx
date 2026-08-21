@@ -22,7 +22,7 @@ import {
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Why Conciero",
+  title: "Why Choose Conciero",
   description:
     "Why Conciero is different: senior-level assistants with 10+ years' experience, proactive partner-level support, and AI-driven efficiency for individuals, founders, and global businesses.",
   path: "/why-conciero",

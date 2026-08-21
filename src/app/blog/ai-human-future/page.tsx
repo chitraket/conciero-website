@@ -4,11 +4,11 @@ import Link from "next/link";
 import { ArrowLeft, Bot, Users, Sparkles, Shield } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "AI + Human: The Future of Virtual Assistance | Conciero Blog",
+  title: "AI + Human: The Future of Virtual Assistance",
   description:
     "How combining AI automation with human expertise creates the perfect virtual assistant experience for modern businesses.",
   path: "/blog/ai-human-future",
@@ -44,6 +44,13 @@ export default function Page() {
           mainEntityOfPage: "https://conciero.co/blog/ai-human-future",
         }}
       />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Blog", path: "/resources" },
+          { name: "AI + Human: The Future of Virtual Assistance", path: "/blog/ai-human-future" },
+        ])}
+      />
+
       <article className="pt-28 md:pt-36 pb-12 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">

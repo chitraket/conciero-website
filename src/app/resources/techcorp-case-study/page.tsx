@@ -4,6 +4,8 @@ import { ArrowLeft, Clock, DollarSign, TrendingUp, Users } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { buildMetadata } from "@/lib/seo";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
   title: "How TechCorp Scaled Operations with Conciero | Case Study",
@@ -27,6 +29,33 @@ const stats = [
 
 export default function Page() {
   return (
+    <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "How TechCorp Scaled Operations with Conciero",
+          description: "Learn how a Fortune 500 company saved 40% on operational costs while improving productivity with Conciero virtual assistants.",
+          image: siteConfig.ogImage,
+          author: { "@type": "Organization", name: "Conciero" },
+          publisher: {
+            "@type": "Organization",
+            name: "Conciero",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://conciero.co/assets/logo-X1-8k2Vp.png",
+            },
+          },
+          mainEntityOfPage: "https://conciero.co/resources/techcorp-case-study",
+        }}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Resources", path: "/resources" },
+          { name: "How TechCorp Scaled Operations with Conciero", path: "/resources/techcorp-case-study" },
+        ])}
+      />
+
     <article className="pt-28 md:pt-36 pb-12 md:pb-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
@@ -131,5 +160,6 @@ export default function Page() {
         </div>
       </div>
     </article>
+    </>
   );
 }
